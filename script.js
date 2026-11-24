@@ -21,8 +21,8 @@ const CONFIG = {
 // ==========================================
 
 // Funcionamiento normal:
-const FECHA_PRUEBA = "2026-12-05";
-//const FECHA_PRUEBA = null;
+//const FECHA_PRUEBA = "2026-12-05";
+const FECHA_PRUEBA = null;
 
 // Para probar el día 5 de diciembre:
 // const FECHA_PRUEBA = "2026-12-05";
