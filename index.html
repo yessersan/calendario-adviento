@@ -1,0 +1,208 @@
+
+<!--
+  index.html
+  Calendario de Adviento con sobres románticos y música.
+  EDITAR: nombre, bienvenida y archivo de música en music/.
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#682b3a">
+
+    <title>24 cartas para ti ❤️</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="floating-hearts" aria-hidden="true">
+        <span>♥</span>
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+    </div>
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <span class="eyebrow">UNA CARTA PARA CADA DÍA</span>
+
+            <!-- PERSONALIZA EL NOMBRE -->
+            <h1>
+                24 cartas para
+                <span id="person-name">Mi persona especial</span>
+            </h1>
+
+            <!-- PERSONALIZA EL MENSAJE -->
+            <p id="welcome-message" class="welcome-message">
+                Hay cosas bonitas que merecen ser descubiertas poco a poco.
+                Preparé 24 pequeñas cartas para ti.
+            </p>
+
+            <div class="heart-divider">
+                <span></span>
+                ♥
+                <span></span>
+            </div>
+
+            <p class="instruction">
+                Cada sobre guarda algo que quiero compartir contigo.
+            </p>
+
+            <!-- REPRODUCTOR DE MÚSICA -->
+            <div class="music-player">
+
+                <div class="music-information">
+                    <span class="music-icon">♫</span>
+
+                    <div>
+                        <strong>Perfect</strong>
+                        <small>Ed Sheeran</small>
+                    </div>
+                </div>
+
+                <button
+                    id="music-button"
+                    class="music-button"
+                    type="button"
+                    aria-label="Reproducir música"
+                >
+                    <span id="music-icon">▶</span>
+                    <span id="music-label">Escuchar canción</span>
+                </button>
+
+                <audio id="background-music" loop preload="none">
+                    <source src="music/perfect.mp3" type="audio/mpeg">
+                    Tu navegador no soporta audio HTML5.
+                </audio>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main class="container">
+
+        <section class="calendar-section">
+
+            <div class="section-heading">
+
+                <span class="section-subtitle">
+                    DICIEMBRE ESTÁ LLENO DE MAGIA
+                </span>
+
+                <h2>Abre una carta cada día</h2>
+
+                <p>
+                    24 sobres, 24 recuerdos y un cariño especial.
+                </p>
+
+            </div>
+
+            <div class="calendar-legend">
+                <span>
+                    <i class="legend-dot available"></i>
+                    Disponible
+                </span>
+
+                <span>
+                    <i class="legend-dot locked"></i>
+                    Cerrado
+                </span>
+
+                <span>
+                    <i class="legend-dot opened"></i>
+                    Abierto
+                </span>
+            </div>
+
+            <div
+                class="calendar-grid"
+                id="calendar-grid"
+            >
+                <!-- Los sobres se generan con JavaScript -->
+            </div>
+
+            <div
+                class="date-message"
+                id="date-message"
+                aria-live="polite"
+            >
+                Preparando tus cartas...
+            </div>
+
+        </section>
+
+        <!-- VENTANA DE LA CARTA -->
+        <section
+            class="letter-section"
+            id="letter-section"
+            hidden
+        >
+
+            <div class="letter-card" id="letter-card">
+
+                <div class="letter-top">
+                    <span>UNA CARTA ESPECIAL PARA TI</span>
+                    <span class="letter-heart">♥</span>
+                </div>
+
+                <h2 id="letter-title">
+                    Mi pequeña sorpresa
+                </h2>
+
+                <div class="letter-image-container">
+
+                    <img
+                        id="letter-image"
+                        src=""
+                        alt="Fotografía de un recuerdo especial"
+                    >
+
+                </div>
+
+                <div class="letter-divider">♡</div>
+
+                <p
+                    class="letter-message"
+                    id="letter-message"
+                ></p>
+
+                <div class="letter-signature">
+                    Con mucho cariño,
+                    <span>para ti ♥</span>
+                </div>
+
+                <div class="letter-decoration">
+                    ✦
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-heart">♥</div>
+
+        <h3>Un pequeño detalle para alguien especial.</h3>
+
+        <p>
+            24 días, 24 cartas y muchos motivos para sonreír.
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
